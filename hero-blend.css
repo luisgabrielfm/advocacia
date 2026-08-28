@@ -45,10 +45,37 @@
 }
 
 @media (max-width: 650px) {
+  .hero {
+    min-height: 1250px;
+    height: 1250px;
+  }
+
   .hero .outline-name {
-    top: 16%;
+    top: 105px;
     font-size: 20.5vw;
     letter-spacing: -.08em;
+  }
+
+  .hero .hero-copy {
+    top: 190px;
+  }
+
+  .hero .hero-copy h1 {
+    font-size: 36px;
+  }
+
+  .hero .hero-portrait:not(.hero-portrait-head) {
+    top: auto;
+    bottom: 74px;
+    left: 50%;
+    height: 40%;
+    max-width: 110%;
+    opacity: 1;
+    object-position: center bottom;
+  }
+
+  .hero .hero-portrait-head {
+    display: none;
   }
 
   .brand > span:last-child {
@@ -57,6 +84,6 @@
   }
 
   .hero::after {
-    background: linear-gradient(90deg, rgba(0, 0, 0, .7), rgba(0, 0, 0, .1));
+    background: linear-gradient(180deg, rgba(0, 0, 0, .12) 0 52%, rgba(0, 0, 0, 0) 72%);
   }
 }
