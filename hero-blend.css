@@ -1,0 +1,62 @@
+.hero {
+  background: #000;
+}
+
+.hero .hero-portrait {
+  z-index: 0;
+}
+
+.hero .hero-portrait-head {
+  z-index: 2;
+  clip-path: inset(0 0 53% 0);
+  mix-blend-mode: normal;
+  -webkit-mask-image: url("assets/k-william-hero.png");
+  mask-image: url("assets/k-william-hero.png");
+  -webkit-mask-mode: luminance;
+  mask-mode: luminance;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center bottom;
+  mask-position: center bottom;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  pointer-events: none;
+}
+
+.hero .outline-name {
+  z-index: 1;
+  font-size: clamp(72px, 11.2vw, 180px);
+  letter-spacing: -.075em;
+  pointer-events: none;
+}
+
+.brand > span:last-child {
+  letter-spacing: .16em;
+}
+
+.hero .hero-copy,
+.hero .orbit,
+.hero .client-strip {
+  z-index: 3;
+}
+
+.hero::after {
+  background: linear-gradient(90deg, rgba(0, 0, 0, .35), transparent 35% 65%, rgba(0, 0, 0, .45));
+}
+
+@media (max-width: 650px) {
+  .hero .outline-name {
+    top: 16%;
+    font-size: 20.5vw;
+    letter-spacing: -.08em;
+  }
+
+  .brand > span:last-child {
+    font-size: 10px;
+    letter-spacing: .12em;
+  }
+
+  .hero::after {
+    background: linear-gradient(90deg, rgba(0, 0, 0, .7), rgba(0, 0, 0, .1));
+  }
+}
